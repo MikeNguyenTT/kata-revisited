@@ -7,7 +7,7 @@ const urlDecode = function(text) {
   let textLeft = text;
   for (let i = 0; i < text.length; i++) {
     if (text[i] === "&") {
-      pairList.push(text.slice(lastPairIndex, i))
+      pairList.push(text.slice(lastPairIndex, i));
       lastPairIndex = i;
       textLeft = text.slice(i + 1);
     }
@@ -30,7 +30,7 @@ const decodeIntoPair = function(pairList) {
     }
   }
   return obj;
-}
+};
 
 console.log(urlDecode("duck=rubber"));
 console.log(urlDecode("bootcamp=Lighthouse%20Labs"));
